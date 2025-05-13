@@ -18,8 +18,7 @@ dependencies = ["mlflow==2.17.0",
                 "databricks-sdk==0.32.0",
                 "pydantic==2.9.2",
                 "loguru==0.7.3",
-                "marvelous",
-                "pre-commit"
+                "marvelous"
                 ]
 
 dynamic = ['version']
@@ -39,8 +38,7 @@ test = [
     "pyspark==3.5.3",
     "pytest>=8.3.5",
 ]
-ci = [
-
+ci = ["pre-commit"
 ]
 
 [build-system]

@@ -766,7 +766,6 @@ dependencies = [
     { name = "mlflow" },
     { name = "numpy" },
     { name = "pandas" },
-    { name = "pre-commit" },
     { name = "psutil" },
     { name = "pyarrow" },
     { name = "pydantic" },
@@ -775,6 +774,9 @@ dependencies = [
 ]
 
 [package.optional-dependencies]
+ci = [
+    { name = "pre-commit" },
+]
 dev = [
     { name = "databricks-connect" },
     { name = "ipykernel" },
@@ -806,7 +808,7 @@ requires-dist = [
     { name = "numpy", specifier = "==1.26.4" },
     { name = "pandas", specifier = "==2.2.3" },
     { name = "pip", marker = "extra == 'dev'", specifier = ">=24.2" },
-    { name = "pre-commit" },
+    { name = "pre-commit", marker = "extra == 'ci'" },
     { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=4.1.0,<5" },
     { name = "psutil", specifier = "==6.0.0" },
     { name = "pyarrow", specifier = "==14.0.1" },

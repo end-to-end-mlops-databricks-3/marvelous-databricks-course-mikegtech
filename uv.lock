@@ -815,7 +815,7 @@ requires-dist = [
     { name = "scikit-learn", specifier = "==1.5.2" },
     { name = "scipy", specifier = "==1.14.1" },
 ]
-provides-extras = ["dev", "test"]
+provides-extras = ["dev", "test", "ci"]
 
 [[package]]
 name = "identify"

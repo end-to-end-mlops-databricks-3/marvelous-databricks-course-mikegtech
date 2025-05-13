@@ -38,6 +38,9 @@ test = [
     "pyspark==3.5.3",
     "pytest>=8.3.5",
 ]
+ci = [
+    
+]
 
 [build-system]
 requires = ["setuptools>=72.0"]

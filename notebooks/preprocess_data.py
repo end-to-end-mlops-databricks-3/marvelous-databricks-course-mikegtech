@@ -3,6 +3,7 @@
 # % pip install -e ..
 # %restart_python
 
+# TODO: REMOVE COMMENTED CODE
 # from pathlib import Path
 # import sys
 # sys.path.append(str(Path.cwd().parent / 'src'))
@@ -52,10 +53,6 @@ train_set_with_timestamp.write.mode("append").saveAsTable(f"{catalog_name}.{sche
 test_set_with_timestamp.write.mode("append").saveAsTable(f"{catalog_name}.{schema_name}.test_set")
 
 # COMMAND ----------
-spark.sql(
-    f"ALTER TABLE {catalog_name}.{schema_name}.train_set " "SET TBLPROPERTIES (delta.enableChangeDataFeed = true);"
-)
+spark.sql(f"ALTER TABLE {catalog_name}.{schema_name}.train_set SET TBLPROPERTIES (delta.enableChangeDataFeed = true);")
 
-spark.sql(
-    f"ALTER TABLE {catalog_name}.{schema_name}.test_set " "SET TBLPROPERTIES (delta.enableChangeDataFeed = true);"
-)
+spark.sql(f"ALTER TABLE {catalog_name}.{schema_name}.test_set SET TBLPROPERTIES (delta.enableChangeDataFeed = true);")

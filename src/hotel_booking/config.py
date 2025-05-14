@@ -42,3 +42,14 @@ class ProjectConfig(BaseModel):
         for k in ["dev", "acc", "prd"]:
             config_dict.pop(k)
         return cls(**config_dict)
+
+
+class Tags(BaseModel):
+    """Represents a set of tags for a Git commit.
+
+    Contains information about the Git SHA, branch, and job run ID.
+    """
+
+    git_sha: str
+    branch: str
+    job_run_id: str

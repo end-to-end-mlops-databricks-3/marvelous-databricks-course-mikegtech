@@ -25,12 +25,13 @@ jobs:
 
       - name: Install the dependencies
         run: |
-          uv sync --extra ci
+          uv sync --extra ci --extra test
 
       - name: Run pre-commit checks
         run: |
           uv run pre-commit run --all-files
 
-      - name: run pytest
-        run: |
-          uv run pytest
+      # TODO: ADD TESTS
+      # - name: run pytest
+      #  run: |
+      #    uv run pytest
